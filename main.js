@@ -1,7 +1,11 @@
 const $ = (selector) => document.querySelector(selector);
 
-const $btnSwitchTheme = $("#btn-switch-theme");
+const $menu = $('.menu')
+const $close = $('.close')
+const $nav = $('.hidden')
 
+
+const $btnSwitchTheme = $("#btn-switch-theme");
 const $body = $("#body");
 const $heading = $(".heading");
 const $subHeading = $(".sub-heading");
@@ -27,6 +31,15 @@ $btnSwitchTheme.addEventListener("click", () => {
   $moon.src = $body.classList.contains("dark")
   ? "/assets/Moon_fill.svg"
   : "/assets/Moon_fill_light.svg";
+
+  $nav.style.background = $body.classList.contains("dark") ? '#111729' : '#F2F9FE' 
 });
 
+$menu.addEventListener('click', () => {
+  $nav.classList.add("active");
+})
+
+$close.addEventListener('click', () => {
+  $nav.classList.remove("active");
+})
 
