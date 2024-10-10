@@ -12,15 +12,16 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body id="body">
     <!-- Header & Navbar -->
     <header>
       <nav class="navbar">
         <div class="hero-container">
-          <img src="/assets/alarado-icon-homepage.svg" alt="Logo de Alarado" />
+          <img id="logo-alarado" src="/assets/alarado-icon-homepage.svg" alt="Logo de Alarado" />
         </div>
 
         <ul class="links">
+          <span class="close">X</span>
           <li>
             <a href="#" class="active-link small-text link">About us</a>
           </li>
@@ -29,7 +30,16 @@
           <li><a class="small-text link" href="#">Contact</a></li>
         </ul>
 
-        <button>Theme</button>
+        <button id="btn-switch-theme" class="theme">
+          <img id="moon" class="icon-theme" src="/assets/Moon_fill_light.svg" alt="">
+          <img id="sun" class="icon-theme background-theme-icon" src="/assets/Sun_fill.svg" alt="">
+        </button>
+
+        <button class="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </header>
 
@@ -63,4 +73,5 @@
       </aside>
     </main>
   </body>
+  <script src="/main.js" type="module"></script>
 </html>
